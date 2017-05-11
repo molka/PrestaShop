@@ -18,11 +18,11 @@
 		height: 30px
 		width: 30px
 		position: fixed
-		right: 10px
+		@include right(10px)
 		bottom: 10px
 		z-index: 9003
-		padding: 0px 6px
-		margin: -2px 0px 0px
+		padding: 0 6px
+		margin: -2px 0 0
 		text-align: center
 		line-height: 30px
 		text-decoration: none
@@ -30,7 +30,6 @@
 		cursor: pointer
 		font-size: 16px
 		background-color: $main-color
-		@include right(10px)
 		&:hover
 			background-color: $brand-primary
 	a.footer_link
@@ -42,7 +41,7 @@
 			font-size: $icon-size-base
 			color: white
 	.footer-contact
-		padding: 7px 0 0 0
+		padding: 7px 0 0
 		line-height: 35px
 		white-space: nowrap
 		overflow: hidden
