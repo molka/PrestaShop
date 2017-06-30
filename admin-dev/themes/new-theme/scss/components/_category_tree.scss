@@ -14,6 +14,8 @@ ul.category-tree {
       font-size: rem(20px);
       color: $gray-medium;
       top: rem(-4px);
+      @include rtl;
+        transform: rotate(180deg);
     }
   }
   .less {
@@ -33,7 +35,7 @@ ul.category-tree {
     }
   }
   ul {
-    padding-left: rem(25px);
+    @include padding-left(rem(25px));
   }
   li {
     list-style: none;
@@ -42,7 +44,7 @@ ul.category-tree {
     background-position: 0 3px;
     .checkbox,
     .radio {
-      padding-left: 20px;
+      @include padding-left(20px);
       padding-top: 0;
     }
     > ul {
@@ -56,7 +58,7 @@ ul.category-tree {
   border-radius: rem(3px);
   .categories-tree-actions {
     display: inline-block;
-    margin-left: rem(15px);
+    @include margin-left(rem(15px));
     i.material-icons {
       font-size: 1.25rem;
       vertical-align: bottom;

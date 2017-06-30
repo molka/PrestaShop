@@ -5,6 +5,7 @@
   width: $size-navbar-width;
   padding-top: rem(10px) + $size-header-height;
   height: 100%;
+  @include left(0);
   @include media-breakpoint-down(sm) {
     visibility: hidden;
   }
@@ -13,21 +14,21 @@
     line-height: rem(28px);
   }
   &.mobile-nav {
-    margin-left: -100%;
+    @include margin-left(-100%);
     width: 90%;
     @include transition(all .5s ease-in);
     &.expanded {
       visibility: visible;
-      margin-left: 0;
+      @include margin-left(0);
       overflow-y: scroll;
     }
     .onboarding-navbar {
       display: none;
     }
     .panel-collapse {
-      padding-left: 0;
+      @include padding-left(0);
       .link-leveltwo .link {
-        padding-left: rem(50px);
+        @include padding-left(rem(50px));
         background: $gray-dark-hover;
       }
     }
@@ -64,12 +65,12 @@
         content: "\E313";
         font-size: rem(20px);
         line-height: rem(22px);
-        margin-left: rem(10px);
+        @include margin-left(rem(10px));
         vertical-align: bottom;
       }
     }
     .items-list {
-      padding-left: 0;
+      @include padding-left(0);
       a:focus {
           background-color: transparent;
       }
@@ -81,12 +82,12 @@
           font-weight: bold;
         }
         &.shop {
-          padding: rem(15px) rem(15px) rem(15px) rem(40px);
+          @include padding(rem(15px), rem(15px), rem(15px), rem(40px));
           a {
               display: inline-block;
               width: auto;
               &.link-shop {
-                  float: right;
+                  @include float(right);
                   .material-icons {
                       font-size: rem(20px);
                       color: $gray-medium;
@@ -123,7 +124,7 @@
     display:block;
     color: $gray-dark-text;
     text-decoration: none;
-    padding: 0 rem(5px) 0 $padding-size;
+    @include padding(0, rem(5px), 0, $padding-size);
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -135,9 +136,9 @@
     }
   }
   &.-active {
-    border-right: rem(3px) solid $gray-dark-text-hover;
+    @include border-right(rem(3px) solid $gray-dark-text-hover);
     @include media-breakpoint-down(sm) {
-      border-right: none;
+      @include border-right(none);
     }
   }
   &.-active > .link,
@@ -162,7 +163,7 @@
   &.-hover > .submenu {
     display: inline-block;
     position: absolute;
-    left: $size-navbar-width;
+    @include left($size-navbar-width);
     margin-top: -$size-navbar-link-height;
     padding: 0;
   }
@@ -171,9 +172,9 @@
       margin-top: 0;
       position: inherit;
       display: block;
-      padding-left: $padding-size;
+      @include padding-left($padding-size);
       @include media-breakpoint-down(sm) {
-        padding-left: 0;
+        @include padding-left(0);
       }
     }
   }
@@ -214,7 +215,7 @@
 
   > .title {
     background: $gray-dark;
-    padding-right: 10px;
+    @include padding-right(10px);
   }
 }
 
@@ -250,18 +251,18 @@
 
       > .link {
         > .material-icons {
-          float: left;
+          @include float(left);
         }
 
         > span {
           display: inline-block;
-          margin-left: rem(45px);
-          float: left;
+          @include margin-left(rem(45px));
+          @include float(left);
         }
       }
 
       > .submenu {
-        left: $size-navbar-width-mini;
+        @include left($size-navbar-width-mini);
         width: $size-navbar-width - $size-navbar-width-mini;
         margin-top: 0;
       }
@@ -290,7 +291,7 @@
   .link-leveltwo {
     > .link {
       padding: 0 20px;
-      text-align: left;
+      @include text-align(left);
     }
   }
 }
@@ -306,7 +307,7 @@
     height: 100%;
     z-index: 501;
     top: 0;
-    left: 0;
+    @include left(0);
     &.expanded {
       opacity: 1;
       visibility: visible;

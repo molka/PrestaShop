@@ -37,8 +37,8 @@
     display: block;
     position: fixed;
     top: $size-header-height - rem(1px);
-    left: $size-navbar-width;
-    right: 0;
+    @include left($size-navbar-width);
+    @include right(0);
     box-shadow: $gray-dark 0 0 10px;
     z-index: 400;
     height: 1px;
@@ -47,7 +47,7 @@
   // Resets
   ul.nostyle {
     list-style: none;
-    padding-left: 0;
+    @include padding-left(0);
   }
   .tab-content {
     padding: 0;
@@ -70,7 +70,7 @@
       background-size: 4%;
     }
     .help-box {
-      margin-left: rem(10px);
+      @include margin-left(rem(10px));
       margin-top: rem(10px);
     }
     .form_step1_type_product,
@@ -112,18 +112,18 @@
     z-index: 10;
     background: $white;
     bottom: 0;
-    left: $size-navbar-width;
-    right: 0;
+    @include left($size-navbar-width);
+    @include right(0);
     .for-switch {
       display: inline-block;
-      margin-left: rem(20px);
-      margin-right: rem(4px);
+      @include margin-left(rem(20px));
+      @include margin-right(rem(4px));
       font-size: rem(14px);
     }
     .duplicate,
     .go-catalog,
     .new-product {
-      margin-right: rem(10px);
+      @include margin-right(rem(10px));
       margin-top: rem(10px);
     }
     .preview,
@@ -191,7 +191,7 @@
     display: inline-block;
     border: 1px solid $gray-light;
     outline: solid 4px $white;
-    margin: 0 rem(10px) 0 0;
+    @include margin(0, rem(10px), 0, 0);
     border-radius: rem(3px);
   }
 
@@ -235,7 +235,7 @@
     transition: width 0.5s ease-out, margin 0.5s ease-out;
     z-index: 1;
     &.col-md-8 {
-      border-right: solid 1px $gray-light;
+      @include border-right(solid 1px $gray-light);
     }
     &.dropzone {
       .dz-preview {
@@ -368,15 +368,15 @@
   #product-images-form-container {
     min-height: 200px;
     top: 0;
-    right: 0;
+    @include right(0);
     cursor: default !important;
-    margin: 10px 0 5px 5px;
-    float: left;
+    @include margin(10px, 0, 5px, 5px);
+    @include float(left);
     position: absolute;
     z-index: 0;
     .close {
       position: absolute;
-      right: 0.5em;
+      @include right(0.5em);
       top: 0;
       z-index: 1;
     }
@@ -442,7 +442,7 @@
       visibility: hidden;
       position: absolute;
       top: rem(1px);
-      right: rem(1px);
+      @include right(rem(1px));
     }
     &:hover {
       border: 2px $brand-primary solid;
@@ -673,7 +673,7 @@
         font-size: rem(13px);
       }
       .attribute-actions {
-        text-align: right;
+        @include text-align(right);
         line-height: $font-size-base;
         .btn-sm {
           padding: 0;
@@ -696,9 +696,9 @@
     .top-logo {
       max-width: 45px;
       max-height: 45px;
-      float: left;
+      @include float(left);
       margin: {
-        right: 20px;
+        @include right(20px);
         bottom: 20px;
       }
     }
@@ -799,7 +799,7 @@
       &:after {
         content: "\E316";
         font-family: "Material Icons";
-        float: right;
+        @include float(right);
       }
       &.collapsed:after {
         content: "\E313";
@@ -823,10 +823,10 @@
             margin: 0;
             .pretty-checkbox {
               content: "";
-              float: left;
+              @include float(left);
               height: rem(16px);
               width: rem(16px);
-              margin-right: rem(7px);
+              @include margin-right(rem(7px));
               border: rem(1px) solid $gray-light;
             }
           }
@@ -957,7 +957,7 @@
     }
     .nav-tabs {
       height: rem(50px);
-      width: rem(2000px);
+      width: auto;
       position: relative;
       .nav-link.active:not(.description-tab) {
         border-top: transparent;
@@ -998,14 +998,14 @@
     #bulk-combinations-container {
       width: 95%;
       #delete-combinations {
-        float: right;
+        @include float(ight);
       }
       div.row:first-child .form-control-label {
         min-height: auto;
       }
       .btn-block {
         width: auto;
-        float: right;
+        @include float(right);
       }
     }
     .category-hr {

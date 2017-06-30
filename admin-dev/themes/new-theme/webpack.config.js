@@ -27,30 +27,58 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: [
-    'tether/dist/js/tether.js',
-    'jquery/dist/jquery.js',
-    'jquery-ui/jquery-ui.js',
-    'bootstrap/dist/js/npm.js',
-    'bootstrap-tokenfield/dist/bootstrap-tokenfield.js',
-    'moment/moment.js',
-    'eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js',
-    'jwerty/jwerty.js',
-    'magnific-popup/dist/jquery.magnific-popup.js',
-    'dropzone/dist/dropzone.js',
-    'typeahead.js/dist/typeahead.jquery.js',
-    'typeahead.js/dist/bloodhound.js',
-    'moment/moment.js',
-    'moment/min/locales.js',
-    'PrestaKit/dist/js/select2.min.js',
-    'PrestaKit/dist/js/bootstrap-switch.min.js',
-    'PrestaKit/dist/js/jquery.pstagger.min.js',
-    'PrestaKit/dist/js/prestashop-ui-kit.js',
-    'PrestaKit/dist/js/jquery.growl.js',
-    'bootstrap-slider/dist/bootstrap-slider.js',
-    'sprintf-js/src/sprintf.js',
-    './js/theme.js'
-  ],
+  entry: {
+    theme: [
+      'tether/dist/js/tether.js',
+      'jquery/dist/jquery.js',
+      'jquery-ui/jquery-ui.js',
+      'bootstrap/dist/js/npm.js',
+      'bootstrap-tokenfield/dist/bootstrap-tokenfield.js',
+      'moment/moment.js',
+      'eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js',
+      'jwerty/jwerty.js',
+      'magnific-popup/dist/jquery.magnific-popup.js',
+      'dropzone/dist/dropzone.js',
+      'typeahead.js/dist/typeahead.jquery.js',
+      'typeahead.js/dist/bloodhound.js',
+      'moment/moment.js',
+      'moment/min/locales.js',
+      'PrestaKit/dist/js/select2.min.js',
+      'PrestaKit/dist/js/bootstrap-switch.min.js',
+      'PrestaKit/dist/js/jquery.pstagger.min.js',
+      'PrestaKit/dist/js/prestashop-ui-kit.js',
+      'PrestaKit/dist/js/jquery.growl.js',
+      'bootstrap-slider/dist/bootstrap-slider.js',
+      'sprintf-js/src/sprintf.js',
+      './js/theme.js',
+      './scss/theme.scss'
+    ],
+    theme_rtl: [
+      'tether/dist/js/tether.js',
+      'jquery/dist/jquery.js',
+      'jquery-ui/jquery-ui.js',
+      'bootstrap/dist/js/npm.js',
+      'bootstrap-tokenfield/dist/bootstrap-tokenfield.js',
+      'moment/moment.js',
+      'eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js',
+      'jwerty/jwerty.js',
+      'magnific-popup/dist/jquery.magnific-popup.js',
+      'dropzone/dist/dropzone.js',
+      'typeahead.js/dist/typeahead.jquery.js',
+      'typeahead.js/dist/bloodhound.js',
+      'moment/moment.js',
+      'moment/min/locales.js',
+      'PrestaKit/dist/js/select2.min.js',
+      'PrestaKit/dist/js/bootstrap-switch.min.js',
+      'PrestaKit/dist/js/jquery.pstagger.min.js',
+      'PrestaKit/dist/js/prestashop-ui-kit.js',
+      'PrestaKit/dist/js/jquery.growl.js',
+      'bootstrap-slider/dist/bootstrap-slider.js',
+      'sprintf-js/src/sprintf.js',
+      './js/theme.js',
+      './scss/theme-rtl.scss'
+    ]
+  },
   output: {
     path: './public',
     filename: 'bundle.js'
@@ -104,7 +132,7 @@ module.exports = {
     }]
   },
   plugins: [
-    new ExtractTextPlugin('theme.css'),
+    new ExtractTextPlugin('[name].css'),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: false,
       compress: {

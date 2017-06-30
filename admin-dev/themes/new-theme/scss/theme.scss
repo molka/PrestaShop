@@ -1,6 +1,8 @@
 // Tools
 @import "~bourbon/app/assets/stylesheets/bourbon";
 @import "../node_modules/PrestaKit/scss/custom/_variables.scss";
+@import "../../default/sass/vendor/bi-app/variables-ltr";
+@import "../../default/sass/vendor/bi-app/mixins";
 @import "mixins/single_line_block";
 @import "mixins/notification_container";
 @import "mixins/notification_counter";

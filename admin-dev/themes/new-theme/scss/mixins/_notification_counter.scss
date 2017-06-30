@@ -3,7 +3,7 @@
   @include single-line-block(rem(14px));
   position: absolute;
   top: rem(2px);
-  right: rem(2px);
+  @include right(rem(2px));
   color: $white;
   background: $secondary;
   font-size: rem(9px);

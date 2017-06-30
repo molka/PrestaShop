@@ -35,9 +35,6 @@ import 'PrestaKit/dist/css/bootstrap-prestashop-ui-kit.css';
 import 'PrestaKit/dist/css/jquery.growl.css';
 import 'PrestaKit/dist/css/bootstrap-switch.min.css';
 
-// Theme SCSS
-
-import '../scss/theme.scss';
 
 // Theme Javascript
 

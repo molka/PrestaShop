@@ -10,7 +10,7 @@
 .kpi-refresh {
   position: absolute;
   top: 0;
-  right: 0;
+  @include right(0);
 }
 
 .kpi-content {
@@ -19,7 +19,7 @@
   > .material-icons {
     position: absolute;
     top: 0;
-    left: 0;
+    @include left(0);
     font-size: rem(36px);
     color: $primary;
   }
@@ -28,7 +28,7 @@
   > .subtitle,
   > .value {
     font-size: rem(12px);
-    padding-left: rem(50px);
+    @include padding-left(rem(50px));
     display: block;
     color: $gray-dark;
   }

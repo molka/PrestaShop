@@ -34,7 +34,7 @@
 
     .nav {
       .nav-item {
-        margin-left: 0;
+        @include margin-left(0);
         width: 33%;
         text-align: center;
       }

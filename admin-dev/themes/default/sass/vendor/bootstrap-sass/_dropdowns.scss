@@ -169,8 +169,8 @@
 
 // Right aligned dropdowns
 .pull-right > .dropdown-menu {
-  right: 0;
-  left: auto;
+  @include right(0);
+  @include left(auto);
 }
 
 // Allow for dropdowns to go bottom up (aka, dropup-menu)
